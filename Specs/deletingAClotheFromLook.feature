@@ -1,20 +1,25 @@
 Feature: Deleting a clothe from a look
     In order to manage a look I created
-    As a normal user
+    As an authenticated user
     I want to delete a clothe I added to one of my looks
 
     Scenario: Deleting a clothe from my look management page
         Given the look is created
         And contains clothes, owned or not
-        When I want to remove a clothe from my look on its management page
-        Then I can select one or several clothes to remove, and then simple delete them
-        And the relation-tag between the clothes and the look will me removed.
+        And I'm on the look management page
+        When I select one or several of the look's clothes
+        And I select the "Delete" option
+        Then a confirmation pop up is displayed
+        And when I valid, it deletes the selected clothes from the look
+        And it removes the look tag from them
 
-    Scenario: Deleteing a clothe from a look on clothe thumbnail 
-        Given the clothe is already added to a look
-        And then the tag explaining the relation between the look and the clothe is displayed
-        When I want to delete it directly from my look without going on the look management page
-        Then there's a button that allows me to delete the clothe from the specific look only 
+    Scenario: Deleting a clothe from clothe thumbnail 
+        Given the clothe thumbnail is displayed
+        And the clothe is already added to a look
+        And then the tag explaining the relation between the look and the clothe is displayed        
+        When click on the cross next to the look name
+        Then a confirmation pop up is displayed
+        And it removes the look tag from them
     
         
     

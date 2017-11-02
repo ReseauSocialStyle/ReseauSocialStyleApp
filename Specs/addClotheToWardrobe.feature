@@ -1,15 +1,15 @@
 Feature: Add clothe to wardrobe
     In order to complete my personnal wardrobe
-    As a normal user
+    As an authenticated user
     I want to add a clothe to my wardrobe
 
-    Scenario: Add a random or a wished clothe to my wardrobe
+    Scenario: Add a clothe to my wardrobe
         Given I already created my user account
-        When I purchased a clothe
-        And I want to add it to my wardrobe
-        Then I can search it on the website. When I find the good reference,
-            an option must allow me to add it to my wardrobe
-        And the clothe must then be tagged as owned
+        And I'm connected
+        When I'm on a clothe thumbnail
+        And I click on the add option
+        Then the clothe is added to my personnal wardrobe
+        And the clothe is tagged as owned
     
 
     

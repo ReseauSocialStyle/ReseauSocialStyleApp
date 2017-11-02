@@ -1,24 +1,29 @@
 Feature: Look Creation
-    In order to manage a set of clothe
-    As a normal user
+    In order to manage a look
+    As an authenticated user
     I want create a look with and a short desription
 
-    Scenario: Look creation from user's wardrobe management page
-        Given the user just wants to create a new look
-        When he already is on his wardrobe management page
-        Then he can create a new set of clothe (also called look) by setting it a title
-        and a short description. The title of the look doesn't have to be unique
-        And the look will be automatically added to user's wardrobe
+    Scenario: Look creation from user's looks management page
+        Given I am on my wardrobe management page
+        When I click on look creation button
+        And I fill the fields of the pop up form with a title and a short description
+        And I valid my form
+        Then the new look is created
+        And is added to my looks list
 
-    Scenario: Look creation by selecting a clothe
-        Given the target clothe is on screen
+    Scenario: Look creation by selecting one or several clothes
+        Given the target clothe(s) is on screen
         And the look hasn't been created yet
-        When I see a clothe, owend or simply wished, I want to add
-        to a look
-        Then I can click an option that allows me to create directly a look with the same information
-            than on the basic look creation form : name + short description. The title doesn't have to be unique.
-        And the look will be automatically created and added to my wardrobe
-        And the selected clothe will be automatically added to this new look, with a tag indicating the relation.
+        When select the clothe(s)
+        And select the "Add to look" option
+        And I click on "Create a new look" option
+        And the look creation form pops up
+        And I fill the fields of the pop up form with a title and a short description
+        And I valid my form
+        Then the new look is created
+        And is added to my looks list
+        And the selected clothes are added to it
+        And they're tagged with the name of the new look
         
 
         
