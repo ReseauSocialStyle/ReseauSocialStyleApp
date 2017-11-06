@@ -10,7 +10,7 @@ Scenario: Choose Between Sign In or Sign UP
 Scenario: Create Profile
     Given I am on the Sign Up Page
     And i completed user's information
-    And and my informations are validated
+    And my informations are validated
     When I Confirm my subscription
     Then the account is created
     And a mail is sent to user
