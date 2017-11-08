@@ -103,7 +103,7 @@ Pour travailler sur les specs :
 
 *(On doit avoir une branche featre/spec dans laquelle il y a une sous-branche pour chaque US)*
 
-Mahmoud a écrit les commandes principales pour pour effectuer ces opérations dans *[ce document](/../../Specs/README.md)*
+Mahmoud a écrit les commandes principales pour pour effectuer ces opérations dans *[ce document](/Specs/README.md)*
 
 <br>
 
