@@ -22,8 +22,8 @@ To be done or watched
 - [ ] react
 
 ## FATOUMI Mahmoud
-- [ ] gherkin
-- [ ] git
+- [x] gherkin
+- [x] git
 - [ ] nodejs
 - [ ] webpack
 - [ ] react	
