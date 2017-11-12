@@ -16,7 +16,7 @@ To be done or watched
 
 ## DAUSSY Marion
 - [ ] gherkin
-- [ ] git
+- [x] git
 - [ ] nodejs
 - [ ] webpack
 - [ ] react
