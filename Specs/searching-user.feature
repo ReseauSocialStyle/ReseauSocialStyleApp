@@ -1,26 +1,26 @@
 Feature: Searching user
 
-    In order to find a user
-    As an authenticated user
+    In order to find other user(s),
+    as an authenticated user,
     I want to make a research
 
     Scenario: Users suggestions from any page
-        Given I am connected on "any page" of the app
-        When I type some text in the "search bar"
-        Then a "list" of suggestions appears
+        Given I am already logged in to the application
+        When  I type name of a user that I search for, in the "search bar"
+        And   I click on the search button/press Enter
+        Then  A list of suggested users/none (if there is none with such a name) appears in the "result section" of the page
 
-    Scenario: Redirection to the user profile page from the list of suggestions that appeared under the search bar
-        Given I wrote "some text" in the searching bar
-        And a "list of suggested users" appeared right below the search bar
-        When I click on a "suggested user"
-        Then I am redirected to the "user profile" page
+    Scenario: Users suggestions from "advanced user search" page
+        Given I am already logged in to the application 
+        And   I go to the "advanced user search" page
+        When  I fill out some (optional)/all (obligatory) criteria of a user 
+        And   I click on the search button
+        Then  A list of suggested users/none appears in the "result section" of the page, corresponding to the selected criteria
 
-    Scenario: Users suggestions from the searching user page by text
-        Given I am on the "searching user page"
-        When I type some text in the "search user field"
-        Then a "list" of suggested users appears in the "result section" of the page
+    Scenario: Redirection to the "user profile" page 
+        Given I have already searched for a user
+        And   I have a list of suggested users (as hyper links) appeared on the "result section" of the page
+        When  I click on one of the suggested users
+        Then  I am redirected to the "user profile" page
 
-    Scenario: Users suggestions from the searching user page by criteria
-        Given I am on the "searching user page"
-        When I select some "criteria"
-        Then a "list" of suggested users appears in the "result section" corresponding to the selected criteria
+
