@@ -15,17 +15,17 @@ Feature: Create wishlist
     Scenario: Search clothes from the wishlist page
         Given I am on the wishlist page
         When I type some text in the "search bar"
-        Then a "list of suggested clothes" appears
+        Then "some results" are displayed in the seach results section
 
     Scenario: Add clothes from research in the wishlist page
         Given I made a "research" on the wishlist page
-        And a "list of suggested clothes" appeared
-        When I "click" on a suggested clothing
-        Then this clothing "is added" to my wishlist
+        And a "some results" appeared
+        When I "click" on an item in the search results section
+        Then this item "is added" to my wishlist
 
     Scenario: Add clothes from a look page, a wardrobe page or another wishlist page
         Given I am on a "look page", a "wardrobe page" or "another wishlist page"
-        And I "selected" a clothing
-        When I "click" on "add to wishlist" for the selected clothing
+        And I "selected" an item
+        When I "click" on "add to wishlist" for the selected item
         And I "select a wishlist"
-        Then the clothing is added to my selected wishlist
+        Then this item is "added" to my selected wishlist
