@@ -6,7 +6,7 @@
 * [Node](#node)
 * [Normes Javascript (ES2015)](#es2015)
 * [Branches Git](#branches-git)
-* [Specs]()
+* [Specs](#specs)
 * [Préparer la prochaine réunion](#préparer-la-prochaine-réunion)
 
 <br>
