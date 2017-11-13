@@ -5,6 +5,9 @@ To be done or watched
 - nodejs => https://github.com/workshopper/learnyounode
 - Webpack => https://app.pluralsight.com/library/courses/webpack-fundamentals/table-of-contents
 - React => https://github.com/workshopper/learnyoureact
+- Nouveautés ES6 => https://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/
+- Create React App => https://github.com/facebookincubator/create-react-app
+- React - Typescript => https://github.com/Microsoft/TypeScript-React-Starter
 
 
 ## BOUSSALEM Dhouha
