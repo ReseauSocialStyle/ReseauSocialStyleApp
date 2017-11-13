@@ -24,3 +24,7 @@ git commit -m "MESSAGE DE COMMIT"
 git push --set-upstream origin feature/specsUSName
 
 ### Faire la pull request
+
+### Schéma
+
+[schéma](https://files.slack.com/files-pri/T02DRB11U-F7YV1N10A/image.png)
