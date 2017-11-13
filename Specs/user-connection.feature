@@ -1,7 +1,7 @@
 Feature: User Connection
 
     In order to use the app
-    As an authenticated user
+    As a disconnected user
     I want to connect to the app
 
     Scenario: Enable connection button
