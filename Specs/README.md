@@ -1,4 +1,4 @@
-# Comment commiter les codes reviews
+# Comment commiter les specs
 
 ### Synchroniser le local avec le remote
 git fetch origin
