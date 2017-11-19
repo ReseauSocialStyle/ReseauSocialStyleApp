@@ -9,7 +9,7 @@ Feature: Add user
    And I have a search bar in my home page
    When I write the name in the search bar
    And press enter
-   Then I get a list of user with the same name
+   Then I get a list of result  relevant to my search criteria (cloths, brands, pages) and users.
 
    Scenario: Advenced search
    Given I have a list of criteria (age, size, favorite brands ...)
