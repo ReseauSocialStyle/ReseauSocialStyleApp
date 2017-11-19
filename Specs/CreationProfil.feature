@@ -18,7 +18,7 @@ Scenario: Create Profile
 
 Scenario: Account Creation Failed
     Given I am on the Sign Up Page
-    And and my informations are verified
+    And my informations are verified
     And there is an invalid field
     Then An error is raised up
   
