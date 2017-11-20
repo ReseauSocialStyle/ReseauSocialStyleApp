@@ -3,13 +3,13 @@ Feature: Add clothe to wardrobe
     As an authenticated user
     I want to add a clothe to my wardrobe
 
-    Scenario: Add a clothe to my wardrobe
-        Given I already created my user account
-        And I'm connected
-        When I'm on a clothe thumbnail
+Scenario: Add a new clothe to my wardrobe
+        When I'm on my wardrobe page
         And I click on the add option
-        Then the clothe is added to my personnal wardrobe
-        And the clothe is tagged as owned
+        And I fill the pop up form to add my clothe
+        And I validate the form with good inputs
+        Then a new clothe is created and added to my wardrobe
+    
     
 
     
