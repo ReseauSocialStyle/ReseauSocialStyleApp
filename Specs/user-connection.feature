@@ -1,29 +1,27 @@
-//Old
-
-Feature: User Connexion
+Feature: User Connection
 
     In order to use the app
-    As an authenticated user
+    As a disconnected user
     I want to connect to the app
 
-    Scenario: Enable connexion button
+    Scenario: Enable connection button
         Given I am on the "login page"
         When I fill "userAccount" field
         And I fill "password" field
-        Then the "connexion button" is enbaled
+        Then the "connection button" is enbaled
 
-    Scenario: Connexion succeed
+    Scenario: connection succeed
         Given I am on the "login page"
-        And "connexion button" is enbaled
-        When I click on the "connexion button"
+        And "connection button" is enbaled
+        When I click on the "connection button"
         And "userAccount + password" is correct
         Then I am connected
         And I am redirected to the main page
 
-    Scenario: Connexion failed
+    Scenario: connection failed
         Given I am on the "login page"
-        And "connexion button" is enbaled
-        When I click on the "connexion button"
+        And "connection button" is enbaled
+        When I click on the "connection button"
         And "userAccount + password" is incorrect
         Then I am not connected
-        And I can see "error" message
+        And I can see an "error" message

@@ -28,9 +28,3 @@ Scenario: Validate Profile
     When i click on Validaion Link
     Then the account is activated
     And the user can login
-
-
-
-
-
-    
