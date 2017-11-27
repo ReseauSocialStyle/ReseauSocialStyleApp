@@ -39,8 +39,8 @@ To be done or watched
 - [ ] react
 
 ## SANAEI Monireh
-- [ ] gherkin
-- [ ] git
+- [x] gherkin
+- [x] git
 - [ ] nodejs
 - [ ] webpack
 - [ ] react
