@@ -18,10 +18,10 @@ To be done or watched
 - [ ] react
 
 ## DAUSSY Marion
-- [ ] gherkin
+- [x] gherkin
 - [x] git
 - [ ] nodejs
-- [ ] webpack
+- [x] webpack
 - [ ] react
 
 ## FATOUMI Mahmoud
