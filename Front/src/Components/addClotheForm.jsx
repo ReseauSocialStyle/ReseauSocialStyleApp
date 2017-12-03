@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { jsonfile } from "jsonfile";
-import {UploadManager, UploadHandler} from "react-file-uploader"
+import Files from 'react-files';
+import all from './style/addClotheForm.css';
 
 class AddClotheForm extends Component {
     state = {
@@ -9,35 +10,36 @@ class AddClotheForm extends Component {
         img: {},
     }
 
-    addClothe(event) {
- 
+    onClotheUpload = function(files) {
+        console.log(files);
+        // const file = files[0];
+        // console.log(file);
+    }
+
+    onFilesError(error, file) {
+        console.log(error);
+    }
+
+    validateForm(event) {
+
     }
 
     render() {
         return (
             <form id="add-clothe-form" onSubmit={this.addClothe}>
-                <div id="clothe-title form-div">
-                    <label>Nom</label>
-                    <input onChange={(target) => { this.Setstate (this.state.title,target.value)}}></input>
-                </div>
 
-                <div id="clothe-brand form-div">
-                    <label>Marque </label>
-                    <input onChange={(target) => { this.Setstate(this.state.brand,target.value) }}></input>
-                </div>
-                <div id="image-upload form-div">
-                    <label>Photo</label>
-                    <UploadManager>
-                        files.map(file =>{
-                            <UploadHandler
-                                key={this.state.img.id}
-                                file={this.state.img}
-                                autoStart={true} />
-                        })
-                    </UploadManager>
-                </div>
+                <label>Nom</label>
+                <input type="text" onChange={(target) => { this.Setstate(this.state.title, target.value) }}></input>
 
-                <button type="submit">Valider</button>
+                <label>Marque </label>
+                <input type="text" onChange={(target) => { this.Setstate(this.state.brand, target.value) }}></input>
+
+
+                <label>Photo</label>
+                   <input type="file" onChange={this.onClotheUpload}/>
+                   <img src={this.state.img.src}/>
+
+                <input type="submit"></input>
             </form>
         )
     }
