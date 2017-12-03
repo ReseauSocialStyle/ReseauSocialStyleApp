@@ -9,6 +9,7 @@ To be done or watched
 - Create React App => https://github.com/facebookincubator/create-react-app
 - React - Typescript => https://github.com/Microsoft/TypeScript-React-Starter
 
+- Suggestion de page pour Redux : https://www.baptiste-donaux.fr/react-redux-concept/
 
 ## BOUSSALEM Dhouha
 - [ ] gherkin
