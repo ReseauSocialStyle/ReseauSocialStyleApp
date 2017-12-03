@@ -35,6 +35,6 @@ JSON Web Tokon
 
 1. Continuer les tuto de la **[todo list](/TODO-by-all.md)** 
 
-2. Faire les tuto des docs officielles de **[React](reactjs.org)** et de **[Redux](redux.js.org)**
+2. Faire les tuto des docs officielles de **[React](https://reactjs.org/)** et de **[Redux](https://redux.js.org/)**
 
 3. Continuer le dev de ses features
