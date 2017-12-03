@@ -1,45 +1,63 @@
 import React, { Component } from "react"
-import { jsonfile } from "jsonfile";
-import Files from 'react-files';
-import all from './style/addClotheForm.css';
+import { fs } from "fs";
+import './style/addClotheForm.css';
+import ReactFileReader from 'react-file-reader';
+import ImageUpload from './ImageUpload.jsx';
 
 class AddClotheForm extends Component {
-    state = {
-        title: '',
-        brand: '',
-        img: {},
+    constructor(props){
+        super(props);
+        this.validateForm = this.validateForm.bind(this);
+        this.state = {
+            title: '',
+            brand: '',
+            image: {},
+            clothe: {}
+    }
+    
     }
 
-    onClotheUpload = function(files) {
-        console.log(files);
-        // const file = files[0];
-        // console.log(file);
-    }
+    validateForm(e) {
+        e.preventDefault();
+        console.log(this.state);
+        console.log("addClotheForm image " + this.state.image)
+         var file = './tmp.json';
+        this.setState({clothe : {
+            name: this.state.title,
+            brand: this.state.brand,
+            image: JSON.stringify(this.state.image)
+        }}, console.log("clothe = " + this.state.clothe));
 
-    onFilesError(error, file) {
-        console.log(error);
-    }
 
-    validateForm(event) {
-
+        var fs = require('fs');
+        fs.writeFileSync(file, JSON.stringify(this.state.clothe));
+        // console.log(this.state.image);
     }
 
     render() {
         return (
-            <form id="add-clothe-form" onSubmit={this.addClothe}>
+            <form id="add-clothe-form" onSubmit={this.validateForm}>
 
                 <label>Nom</label>
-                <input type="text" onChange={(target) => { this.Setstate(this.state.title, target.value) }}></input>
+                <input type="text" onChange={(event) => { this.setState({title : event.target.value}) }}></input>
 
                 <label>Marque </label>
-                <input type="text" onChange={(target) => { this.Setstate(this.state.brand, target.value) }}></input>
+                <input type="text" onChange={(event) => { this.setState({brand: event.target.value});}}></input>
 
 
                 <label>Photo</label>
-                   <input type="file" onChange={this.onClotheUpload}/>
-                   <img src={this.state.img.src}/>
+                <ImageUpload image={this.state.image}/>
+                {/* <ReactFileReader handleFiles={this.onClotheUpload}>
+                    <button className='btn'>Choisissez une image</button>
+                </ReactFileReader> */}
+                {/* <input ref="file"
+                    type="file"
+                    name="user[image]"
+                    multiple="true"
+                    onChange={this.onClotheUpload}></input>
+                <img src={this.state.imgSrc} alt="" /> */}
 
-                <input type="submit"></input>
+                <button type="submit">Valider</button>
             </form>
         )
     }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AddClotheForm from './Components/addClotheForm'
-import Redux from 'redux';
 
 
 class App extends Component {
