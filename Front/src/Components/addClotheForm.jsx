@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { fs } from "fs";
 import './style/addClotheForm.css';
-import ReactFileReader from 'react-file-reader';
 import ImageUpload from './ImageUpload.jsx';
 
 class AddClotheForm extends Component {
@@ -21,7 +20,7 @@ class AddClotheForm extends Component {
         e.preventDefault();
         console.log(this.state);
         console.log("addClotheForm image " + this.state.image)
-         var file = './tmp.json';
+         var file = './data.json';
         this.setState({clothe : {
             name: this.state.title,
             brand: this.state.brand,
@@ -30,8 +29,11 @@ class AddClotheForm extends Component {
 
 
         var fs = require('fs');
-        fs.writeFileSync(file, JSON.stringify(this.state.clothe));
-        // console.log(this.state.image);
+        var stringifiedClothe = JSON.stringify(this.state.clothe);
+        fs.writeFileSync(file, stringifiedClothe, 'utf8', function (err)
+    {
+        console.log(err);
+    });
     }
 
     render() {
