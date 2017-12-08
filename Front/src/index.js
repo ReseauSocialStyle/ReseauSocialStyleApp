@@ -6,7 +6,5 @@ import LookPage from "./Containers/LookPage"
 import registerServiceWorker from './registerServiceWorker';
 
 
-
-
 ReactDOM.render(<LookPage />, document.getElementById('root'));
 registerServiceWorker();

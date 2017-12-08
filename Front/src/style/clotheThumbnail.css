@@ -1,11 +1,10 @@
-.clothe-image{
-    width : 30%;
+.clothe-image-div{
+    width:100px;
 }
-
 .clothe-information{
-    width : 70%;
-    text-align: left;
+    width : 300px;
 }
-.cloth-thumbnail{
-    width : 100%;
+.clothe-thumbnail{
+    margin:auto;
+    display: block;
 }
