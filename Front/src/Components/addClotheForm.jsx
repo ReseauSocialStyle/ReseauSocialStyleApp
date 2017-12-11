@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import { Button, Icon } from 'semantic-ui-react'
+
 import './style/addClotheForm.css';
 import ImageUpload from './ImageUpload.jsx';
 import data from '../data'
@@ -6,15 +8,15 @@ import data from '../data'
 class AddClotheForm extends Component {
     constructor(props) {
         super(props);
-        
+
         this.validateForm = this.validateForm.bind(this);
         this.state = {
             title: '',
             brand: '',
             image: {},
             clothe: {},
-            ...data, 
-            
+            ...data,
+
         }
 
     }
@@ -46,6 +48,14 @@ class AddClotheForm extends Component {
                 <input type="text" onChange={(event) => { this.setState({ brand: event.target.value }); }}></input>
 
 
+                <div class="ui action input">
+                    <input type="text" placeholder="File 1" readonly />
+                    <input type="file" />
+                    <div class="ui icon button">
+                        <i class="attach icon"></i>
+                    </div>
+                </div>
+
                 <label>Photo</label>
                 <ImageUpload image={this.state.image} />
                 {/* <ReactFileReader handleFiles={this.onClotheUpload}>
@@ -58,7 +68,7 @@ class AddClotheForm extends Component {
                     onChange={this.onClotheUpload}></input>
                 <img src={this.state.imgSrc} alt="" /> */}
 
-                <button type="submit">Valider</button>
+                <Button type="submit">Valider</Button>
             </form>
         )
     }
