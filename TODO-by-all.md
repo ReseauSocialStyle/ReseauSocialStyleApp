@@ -9,6 +9,7 @@ To be done or watched
 - Create React App => https://github.com/facebookincubator/create-react-app
 - React - Typescript => https://github.com/Microsoft/TypeScript-React-Starter
 
+- Suggestion de page pour Redux : https://www.baptiste-donaux.fr/react-redux-concept/
 
 ## BOUSSALEM Dhouha
 - [ ] gherkin
@@ -18,10 +19,10 @@ To be done or watched
 - [ ] react
 
 ## DAUSSY Marion
-- [ ] gherkin
+- [x] gherkin
 - [x] git
 - [ ] nodejs
-- [ ] webpack
+- [x] webpack
 - [ ] react
 
 ## FATOUMI Mahmoud
@@ -39,8 +40,8 @@ To be done or watched
 - [ ] react
 
 ## SANAEI Monireh
-- [ ] gherkin
-- [ ] git
+- [x] gherkin
+- [x] git
 - [ ] nodejs
 - [ ] webpack
 - [ ] react
