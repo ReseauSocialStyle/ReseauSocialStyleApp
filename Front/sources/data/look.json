@@ -1,0 +1,31 @@
+{
+    "name":"gothic",
+    "img" : "../images/gothic.jpg",
+    "description":"Super look",
+    "clothes":[
+        {
+            "name":"robe noire",
+            "marque":"H&M",
+            "img":"../images/robe_noire.jpg",
+            "taille":"S"
+        },
+        {
+            "name":"pantalon noir",
+            "img":"../images/pantalon_noir.jpg",
+            "marque":"H&M",
+            "taille":"S"
+        },
+        {
+            "name":"T-shirt Noir",
+            "img":"../images/t-shirt_noir.jpg",
+            "marque":"Hot Topics",
+            "taille":"XS"
+        },
+        {
+            "name":"collier crânes",
+            "img":"../images/collier_gothique.jpg",
+            "marque":"Hot Topics",
+            "taille":""
+        }
+    ]
+}

@@ -25,6 +25,7 @@ class AddClotheForm extends Component {
         e.preventDefault();
         console.log(this.state);
         console.log("addClotheForm image " + this.state.image)
+
         let newState = {
             ...this.state,
             clothe: {
@@ -34,6 +35,7 @@ class AddClotheForm extends Component {
             }
         }
         this.setState(newState, console.log("clothe = " + this.state.clothe));
+
 
     }
 
@@ -58,15 +60,6 @@ class AddClotheForm extends Component {
 
                 <label>Photo</label>
                 <ImageUpload image={this.state.image} />
-                {/* <ReactFileReader handleFiles={this.onClotheUpload}>
-                    <button className='btn'>Choisissez une image</button>
-                </ReactFileReader> */}
-                {/* <input ref="file"
-                    type="file"
-                    name="user[image]"
-                    multiple="true"
-                    onChange={this.onClotheUpload}></input>
-                <img src={this.state.imgSrc} alt="" /> */}
 
                 <Button type="submit">Valider</Button>
             </form>
