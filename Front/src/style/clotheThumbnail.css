@@ -3,8 +3,20 @@
 }
 .clothe-information{
     width : 300px;
+    
 }
 .clothe-thumbnail{
-    margin:auto;
-    display: block;
+    display: inline-block;
+    border : 1px ridge black;
+    padding : 5px;
+}
+
+.info-text{
+    align-content: left;
+    margin-right:auto;
+}
+.delete-icon{
+    background : blue;
+right: 0px;
+position: absolute;
 }
