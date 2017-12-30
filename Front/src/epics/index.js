@@ -7,12 +7,11 @@ const displayFetchedClothes = (results) => ({ type: 'DISPLAY_FETCHED_CLOTHES', r
 
 const fetchClothesByNameEpic = (action$) => 
     action$.ofType('FETCH_CLOTHES_BY_NAME')
-        .mergeMap(action => (
+        .mergeMap(action => 
             ajax.getJSON(`http://localhost:3000/clothes/search/${action.research}`)
                 .map(res => displayFetchedClothes(res))
                 //.error
                 //.takeUntil
-        )
         )
     
 
