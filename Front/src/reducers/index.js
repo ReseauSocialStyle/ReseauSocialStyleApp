@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import wishlists, * as fromWishlists from './wishlists';
+import researches from './researches';
 
 const reducers = combineReducers({
-    wishlists
+    wishlists,
+    researches
 })
 
 export default reducers;

@@ -17,3 +17,10 @@ export const addClotheToWishlist = (wishlistId, clotheId) => ({
     wishlistId,
     clotheId
 });
+
+
+
+export const searchClothesByName = (research) => ({
+    type: 'FETCH_CLOTHES_BY_NAME',
+    research
+});
